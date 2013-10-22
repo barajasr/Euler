@@ -9,7 +9,7 @@
 % not exceed four million, find the sum of the even-valued terms.
 %--------------------------------------------------------------------
 sum_even_fib(Limit, Sum):-
-    sum_fib(1, 1, Limit, Sum).
+    sum_fib(0, 1, Limit, Sum).
 
 sum_fib(_, Second, Limit, 0):-
     Second >= Limit.
