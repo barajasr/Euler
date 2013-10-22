@@ -29,5 +29,6 @@ def bySet(num1, num2, endRange):
 
 if __name__ == '__main__':
     print 'Find the sum of all the multiples of 3 or 5 below 1000:'
-    print bySet(3, 5, 1000)
+    print byCounting(3, 5, 1000)
+    # 233168
 
