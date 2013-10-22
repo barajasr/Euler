@@ -16,11 +16,7 @@ list_of_multiples(_, Cnt, EndRange, []):-
     Cnt >= EndRange.
 list_of_multiples(N, Cnt, EndRange, [Cnt|Multiples]):-
     Cnt < EndRange,
-    Cnt mod N =:= 0,
-    NewCnt is Cnt + 1,
-    list_of_multiples(N, NewCnt, EndRange, Multiples), !.
-list_of_multiples(N, Cnt, EndRange, Multiples):-
-    NewCnt is Cnt + 1,
+    NewCnt is Cnt + N,
     list_of_multiples(N, NewCnt, EndRange, Multiples), !.
 
 sum_of_list([], 0).
