@@ -53,36 +53,32 @@ gonRing(Sum, Length, Concat):-
     Sum - G =:= H + I,
     creapList(J, Is, _),
     Sum - I =:= J + B,
-    % Start with the smallest external node
-    A < D,
+    A < D,                      % Start with the smallest external node
     A < F,
     A < H,
     A < J,
-    atomic_concat(A, B, AB),
-    atomic_concat(AB, C, AC),
-    atomic_concat(D, C, DC),
-    atomic_concat(DC, E, DE),
-    atomic_concat(F, E, FE),
-    atomic_concat(FE, G, FG),
-    atomic_concat(H, G, HG),
-    atomic_concat(HG, I, HI),
-    atomic_concat(J, I, JI),
-    atomic_concat(JI, B, JB),
-    atomic_concat(AC, DE, Concat1),
-    atomic_concat(Concat1, FG, Concat2),
-    atomic_concat(Concat2, HI, Concat3),
-    atomic_concat(Concat3, JB, Concat),
+    atomic_concat(A, B, C, ABC),
+    atomic_concat(D, C, E, DCE),
+    atomic_concat(F, E, G, FEG),
+    atomic_concat(H, G, I, HGI),
+    atomic_concat(J, I, B, JIB),
+    atomic_concat(ABC, DCE, FEG, AG),
+    atomic_concat(AG, HGI, JIB, Concat),
     atom_length(Concat, Length),
-    nl, write('Ring 1:'),
+    nl, write('Ring 1: '),
     write(A), write(','), write(B), write(','), write(C), nl,
-    write('Ring 2:'),
+    write('Ring 2: '),
     write(D), write(','), write(C), write(','), write(E), nl,
-    write('Ring 3:'),
+    write('Ring 3: '),
     write(F), write(','), write(E), write(','), write(G), nl,
-    write('Ring 4:'),
+    write('Ring 4: '),
     write(H), write(','), write(G), write(','), write(I), nl,
-    write('Ring 5:'),
+    write('Ring 5: '),
     write(J), write(','), write(I), write(','), write(B), nl.
+
+atomic_concat(A, B, C, ABC):-
+    atomic_concat(A, B, AB),
+    atomic_concat(AB, C, ABC).
     
 range(End, End, [End]).
 range(Start, End, [Start|Rest]):-
