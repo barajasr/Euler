@@ -90,3 +90,21 @@ range(Start, End, [Start|Rest]):-
     Next is Start - 1,
     range(Next, End, Rest).
 
+%% -----------------------------------------------------
+%   ?- gonRing(14, 16, Concat).
+%   
+%   Ring 1:6,5,3
+%   Ring 2:10,3,1
+%   Ring 3:9,1,4
+%   Ring 4:8,4,2
+%   Ring 5:7,2,5
+%   Concat = '6531031914842725' ;
+%   
+%   Ring 1:6,3,5
+%   Ring 2:7,5,2
+%   Ring 3:8,2,4
+%   Ring 4:9,4,1
+%   Ring 5:10,1,3
+%   Concat = '6357528249411013' ;
+%   false.
+%   
