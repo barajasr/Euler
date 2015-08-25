@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 50: Consecutive prime sum
@@ -16,6 +16,8 @@
 # most consecutive primes?
 #--------------------------------------------------------------------
 
+import sys
+sys.path.append('../Problem_012/')
 import Problem_012 as p
 
 # LONNNNNNNG
@@ -24,7 +26,7 @@ def sumOfConsectutivePrimes(limit=1000000):
     i, j = 1, 2
     runningSum, maxPrime = p.primes[i], 0
     result, longest =  runningSum, 1
-    
+
     for i in xrange(1, len(p.primes)):
         j = i+1
         count = 1
@@ -43,7 +45,7 @@ def sumOfConsectutivePrimes(limit=1000000):
             result = curMaxPrime
             longest = curLongest
             print longest, result
-        
+
     return longest, result
 
 def main():

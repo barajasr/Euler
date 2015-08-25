@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 23: Non-abundant sums
@@ -24,6 +24,8 @@
 # as the sum of two abundant numbers.
 #--------------------------------------------------------------------
 
+import sys
+sys.path.append('../Problem_021/')
 import Problem_021 as p
 
 abundantNums = [12]

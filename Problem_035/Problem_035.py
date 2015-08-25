@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 35: Circular primes
@@ -12,6 +12,8 @@
 # How many circular primes are there below one million?
 #--------------------------------------------------------------------
 
+import sys
+sys.path.append('../Problem_012/')
 import Problem_012 as p
 
 # 0m17.479s

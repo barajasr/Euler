@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 67: Maximum path sum II
@@ -34,9 +34,7 @@ def greatestPathSum():
         for col in xrange(len(data[row])):
             data[row][col] += max(data[row+1][col], data[row+1][col+1])
     return data[0][0]
-            
 
-    
 def main():
     print 'Path with greatest sum:'
     print greatestPathSum()

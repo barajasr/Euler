@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 49: Prime permutations
@@ -16,6 +16,8 @@
 # in this sequence?
 #--------------------------------------------------------------------
 
+import sys
+sys.path.append('../Problem_012/')
 import Problem_012 as p
 
 # 0m0.353s

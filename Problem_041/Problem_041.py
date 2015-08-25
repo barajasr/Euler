@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 41: Pandigital prime
@@ -10,6 +10,8 @@
 # What is the largest n-digit pandigital prime that exists?
 #--------------------------------------------------------------------
 
+import sys
+sys.path.append('../Problem_012/')
 import Problem_012 as p
 
 def isPandigital(number):

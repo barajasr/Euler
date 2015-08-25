@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 47: Distinct primes factors
@@ -18,6 +18,8 @@
 # primes factors. What is the first of these numbers?
 #--------------------------------------------------------------------
 
+import sys
+sys.path.append('../Problem_012/')
 import Problem_012 as p
 
 # MathBlog implementation

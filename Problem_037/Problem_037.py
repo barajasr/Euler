@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 37: Truncatable primes
@@ -14,6 +14,8 @@
 # NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
 #--------------------------------------------------------------------
 
+import sys
+sys.path.append('../Problem_012/')
 import Problem_012 as p
 
 # 0m1.402s

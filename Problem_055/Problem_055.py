@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 55: Lychrel numbers
@@ -36,9 +36,6 @@
 #--------------------------------------------------------------------
 
 def isLychrel(n):
-    if n in S:
-        return True
-
     iterations = 0
     while iterations < 50:
         n += int(str(n)[::-1])
@@ -46,7 +43,7 @@ def isLychrel(n):
             return False
         iterations += 1
     return True
-    
+
 # 0m0.117s
 def lychrelNumbers(limit=10000):
     result = 0

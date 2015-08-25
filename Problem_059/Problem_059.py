@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 59: XOR decryption
@@ -42,14 +42,12 @@ def encryptMessage(message, key):
     return encryption
 
 def main():
-    #grep ^[a-z][a-z][a-z]$ /usr/share/dict/words > threeLetterWords.txt
+    #grep '^[a-z][a-z][a-z]$' /usr/share/dict/words > threeLetterWords.txt
     keyCandidates = open('threeLetterWords.txt').read().splitlines()
     message = open('cipher1.txt').read().split(',')
     for i in keyCandidates:
         print i
-    print ''
-    print 
-    # 
+    #
 
 if __name__ == '__main__':
     main()

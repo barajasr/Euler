@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 92: Square digit chains
@@ -36,7 +36,6 @@ def main():
             solution += 1
 
     return solution
-        
 
 if __name__ == '__main__':
     print 'How many starting numbers below ten million will arrive at 89?'

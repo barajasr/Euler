@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 112: Bouncy numbers
@@ -43,7 +43,7 @@ def main():
         n += 1
         if isBouncyNumber(n):
             bouncies += 1
-        
+
     return n
 
 if __name__ == '__main__':

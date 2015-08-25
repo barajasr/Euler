@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 42: Coded triangle numbers
@@ -34,19 +34,18 @@ def isTriangleNumber(value):
     return False
  
 # 0m0.037s
-def numOFTriangleWords():
+def numOfTriangleWords():
     contents = open('words.txt').read().replace('"', '').split(',')
     triangleWords = 0
     for word in contents:
         wordValue = sum([letter[char] for char in word])
-        #if isTriangleNumber(wordValue):
-        if isTriangleNumberDict(wordValue):
+        if isTriangleNumber(wordValue):
             triangleWords += 1
     return triangleWords
 
 def main():
     print 'How many triangle words are in words.txt'
-    print numOFTriangleWords()
+    print numOfTriangleWords()
     # 162
 
 if __name__ == '__main__':

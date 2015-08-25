@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 46: Goldbach's other conjecture
@@ -19,6 +19,8 @@
 #--------------------------------------------------------------------
 
 import math
+import sys
+sys.path.append('../Problem_012/')
 import Problem_012 as p
 
 def isTwiceSquare(value):
@@ -42,7 +44,7 @@ def golbachProvedWrong():
         if contradicted:
             return n
     return 'Something is wrong here...'
-        
+
 def main():
     print 'What is the smallest odd composite that cannot be' +\
           ' written in the form n = prime + 2*i²'

@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 8: Largest product in a series
@@ -9,19 +9,18 @@
 from operator import mul
 
 def largestProduct(numberText, ofLength):
-    fiveDigits = [int(i) for i in numberText[:ofLength]]
-    sharedProduct = reduce(mul, fiveDigits[1:], 1)
-    solution = fiveDigits[1] * sharedProduct
+    digits = [int(i) for i in numberText[:ofLength]]
+    sharedProduct = reduce(mul, digits[1:], 1)
+    solution = digits[1] * sharedProduct
     for end in xrange(ofLength, len(numberText)):
         newDigit = int(numberText[end])
         product = sharedProduct * newDigit
         if product > solution:
             solution = product
-        fiveDigits = fiveDigits[1:] + [newDigit]        
-        sharedProduct = reduce(mul, fiveDigits[1:], 1)
+        digits = digits[1:] + [newDigit]
+        sharedProduct = reduce(mul, digits[1:], 1)
     return solution
-    
-    
+
 if __name__ == '__main__':
     numberText = '73167176531330624919225119674426574742355349194934' + \
                  '96983520312774506326239578318016984801869478851843' + \
@@ -43,6 +42,6 @@ if __name__ == '__main__':
                  '84580156166097919133875499200524063689912560717606' + \
                  '05886116467109405077541002256983155200055935729725' + \
                  '71636269561882670428252483600823257530420752963450'
-    print 'Largest product of five consecutive digits in a series'
-    print largestProduct(numberText, 5)
+    print 'Largest product of thirteen consecutive digits in a series'
+    print largestProduct(numberText, 13)
 

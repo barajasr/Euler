@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
 # Problem 20: Factorial digit sum
@@ -13,6 +13,8 @@
 #--------------------------------------------------------------------
 
 import math
+import sys
+sys.path.append("../Problem_016/")
 import Problem_016 as p
 
 # 0m0.031s
